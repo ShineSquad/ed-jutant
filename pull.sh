@@ -1,1 +1,1 @@
-curl https://shinesquad.ru/pull.php
+curl https://shinesquad.ru//projects/mascot/pull.php
