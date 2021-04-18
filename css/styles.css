@@ -183,6 +183,11 @@ main {
               color: #205A67; }
               main .container .left .bottom-container .shops-link .item .link:hover {
                 text-decoration: none; }
+          main .container .left .bottom-container .shops-link .disable-item * {
+            pointer-events: none !important;
+            color: grey !important;
+            fill: grey !important;
+            text-decoration: none !important; }
           main .container .left .bottom-container .shops-link .active * {
             color: red !important;
             fill: red;
@@ -299,7 +304,7 @@ main {
             line-height: 20px;
             color: #5D88A5; }
 
-#skin-shop {
+#skin-shop, #food-shop {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -309,14 +314,14 @@ main {
   display: none;
   justify-content: center;
   align-items: center; }
-  #skin-shop .background-modal {
+  #skin-shop .background-modal, #food-shop .background-modal {
     background: rgba(45, 63, 84, 0.3);
     width: 100%;
     height: 100vh;
     position: absolute;
     left: 0;
     top: 0; }
-  #skin-shop .modal {
+  #skin-shop .modal, #food-shop .modal {
     background: #ECEDEF;
     border: 1px solid #58A3B4;
     box-sizing: border-box;
@@ -326,28 +331,28 @@ main {
     position: relative;
     display: flex;
     justify-content: center; }
-    #skin-shop .modal #close-modal {
+    #skin-shop .modal #close-modal, #food-shop .modal #close-modal {
       position: absolute;
       cursor: pointer;
       right: 20px;
       top: 20px; }
-    #skin-shop .modal .modal_container {
+    #skin-shop .modal .modal_container, #food-shop .modal .modal_container {
       width: 995px; }
-      #skin-shop .modal .modal_container .header {
+      #skin-shop .modal .modal_container .header, #food-shop .modal .modal_container .header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 35px 0; }
-        #skin-shop .modal .modal_container .header .title {
+        #skin-shop .modal .modal_container .header .title, #food-shop .modal .modal_container .header .title {
           font-size: 36px;
           line-height: 44px;
           color: #205A67; }
-        #skin-shop .modal .modal_container .header .money {
+        #skin-shop .modal .modal_container .header .money, #food-shop .modal .modal_container .header .money {
           display: flex;
           flex-direction: row;
           align-items: center; }
-          #skin-shop .modal .modal_container .header .money .data {
+          #skin-shop .modal .modal_container .header .money .data, #food-shop .modal .modal_container .header .money .data {
             margin-left: 20px;
             display: flex;
             flex-direction: column;
@@ -460,3 +465,18 @@ main {
   .owl-carousel .item .disable_button {
     pointer-events: none !important;
     background: #C8D0D0 !important; }
+
+#food-shop .owl-carousel .item .security {
+  background: #FAFAFA; }
+  #food-shop .owl-carousel .item .security img {
+    width: auto; }
+
+#food-shop .owl-carousel .item .title {
+  margin-top: 0 !important; }
+  #food-shop .owl-carousel .item .title .name {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+
+#food-shop .owl-carousel .item .button {
+  margin-top: 30px; }

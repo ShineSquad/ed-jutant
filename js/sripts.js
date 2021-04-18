@@ -11,7 +11,6 @@ $(function() {
 	$('#avatar').droppable({
 		drop: function() {
             alert('Вкусно');
-            donuts = 5 - 1;
         }
 	});
 });
@@ -28,3 +27,14 @@ function modal_view( _item, _state ) {
 	$('#skin-shop').css('display', _state);
 }
 
+function modal_food( _item, _state ) {
+	var items = ['clothing-modal', 'food-modal', 'artifacts-modal'];
+	if (_state == 'none') {
+		for (let i in items) {
+			$('.' + items[i]).removeClass('active');
+		}
+	} else {
+		$('.'+_item).addClass('active');
+	}
+	$('#food-shop').css('display', _state);
+}
