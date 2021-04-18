@@ -1,0 +1,1 @@
+curl https://shinesquad.ru/pull.php
